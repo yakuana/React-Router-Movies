@@ -19,9 +19,9 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <Switch>
-        {/* pass props from route path to movieList*/}
-        <Route exact path="/" render={props => {console.log(props); return <MovieList {...props}/>}}/>
-        {/* pass props from route path to movie*/}
+        {/* pass props from route path to movieList */}
+        <Route exact path="/movies" render={props => {console.log(props); return <MovieList {...props}/>}}/>
+        {/* pass props from route path to movie */}
         <Route path="/movies/:id" render={props => {console.log(props); return <Movie {...props}/>}}/>
       </Switch>
     </div>

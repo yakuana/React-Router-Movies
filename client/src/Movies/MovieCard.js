@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const MovieCard = props => {
   const currentMovie = props.movie; 
@@ -7,7 +6,7 @@ const MovieCard = props => {
   return(
     <div className="movie-card">
       {/* added link to specific movie id url using movie.id as the path */}
-      <h2><Link to={`/movies/${currentMovie.id}`}>{currentMovie.title}</Link></h2>
+      <h2>{currentMovie.title}</h2>
       <div className="movie-director">
         Director: <em>{currentMovie.director}</em>
       </div>

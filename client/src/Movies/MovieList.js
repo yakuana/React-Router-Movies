@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import MovieCard from './MovieCard';
 
@@ -27,7 +27,7 @@ const MovieList = props => {
         // previous way to create a movie card <MovieDetails key={movie.id} movie={movie} />
         
         // create movie card using MovieCard component 
-        <MovieCard key={movie.id} movie={movie} />
+        <Link to={`/movies/${movie.id}`}><MovieCard key={movie.id} movie={movie} /></Link>
       ))}
     </div>
   );

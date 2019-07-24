@@ -3,7 +3,7 @@ import axios from 'axios';
 import MovieCard from "./MovieCard"; 
 
 const Movie = (props) => {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState(false);
   
   useEffect(() => {
     const id = props.match.params.id; 
@@ -29,6 +29,7 @@ const Movie = (props) => {
   // }
 
   if (!movie) {
+    // if you want to remove flash, return null which will render nothing 
     return <div>Loading movie information...</div>;
   }
 

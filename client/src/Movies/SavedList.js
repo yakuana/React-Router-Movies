@@ -8,7 +8,7 @@ const SavedList = props => (
       <span className="saved-movie">{movie.title}</span>
     ))}
     {/* added link to home page on the word Home */}
-    <div className="home-button"><Link to="/">Home</Link></div>
+    <div className="home-button"><Link to="/movies">Home</Link></div>
   </div>
 );
 
